@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="Bharath Bheemreddy — AI-native systems builder. SeleKyT, Rust streaming systems, agentic engineering.">
+<title>BHARATH / BUILDING THE NEXT SYSTEM</title>
+<style>
+:root{--bg:#050505;--panel:#0a0c0a;--panel2:#0e120d;--lime:#b7ff00;--lime2:#8cff00;--text:#f4f7f1;--muted:#8c9487;--line:#20261e;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(183,255,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(183,255,0,.02) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 85%);z-index:-1}
+a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font:800 15px/1 monospace;letter-spacing:.18em;color:var(--lime)}.navlinks{display:flex;gap:26px;font:600 12px monospace;color:#aeb5aa}.navlinks a:hover{color:var(--lime)}
+.hero{min-height:calc(100vh - 78px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;padding:60px 0 80px}
+.kicker{font:700 12px monospace;letter-spacing:.18em;color:var(--lime);text-transform:uppercase}.hero h1{font-size:clamp(52px,8vw,105px);line-height:.88;letter-spacing:-.065em;margin:20px 0 26px;max-width:780px}.hero h1 span{color:var(--lime)}
+.hero p{font-size:19px;line-height:1.6;color:#b9c0b5;max-width:680px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{border:1px solid #39422f;padding:13px 17px;font:800 12px monospace;letter-spacing:.04em}.btn.primary{background:var(--lime);color:#050505;border-color:var(--lime)}.btn:hover{transform:translateY(-2px);border-color:var(--lime)}
+.portrait{position:relative;background:#000;border:1px solid #293126;overflow:hidden;box-shadow:0 0 0 1px rgba(183,255,0,.04),0 35px 100px rgba(0,0,0,.6)}.portrait img{display:block;width:100%;height:auto}.scan{position:absolute;left:0;right:0;height:1px;background:var(--lime);opacity:.2;animation:scan 5s linear infinite}@keyframes scan{0%{top:0}100%{top:100%}}
+.section{padding:105px 0;border-top:1px solid var(--line)}.eyebrow{font:800 11px monospace;color:var(--lime);letter-spacing:.18em;text-transform:uppercase}.section h2{font-size:clamp(34px,5vw,64px);line-height:1;margin:14px 0 40px;letter-spacing:-.045em}.intro{max-width:720px;color:#aab1a5;font-size:18px}
+.workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);padding:30px;min-height:330px;position:relative;overflow:hidden}.card:after{content:"";position:absolute;width:180px;height:180px;right:-90px;bottom:-90px;border:1px solid rgba(183,255,0,.18);border-radius:50%}.num{font:800 11px monospace;color:var(--lime)}.card h3{font-size:30px;margin:18px 0 12px}.card p{color:#a9b0a4;max-width:560px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:24px 0}.tag{font:700 10px monospace;border:1px solid #30382c;padding:6px 8px;color:#c0c7ba}.card a.more{font:800 11px monospace;color:var(--lime)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);margin-top:36px}.metric{padding:26px;border-right:1px solid var(--line)}.metric:last-child{border-right:0}.metric b{display:block;color:var(--lime);font:900 clamp(25px,3vw,40px)/1 monospace}.metric span{display:block;margin-top:8px;color:#858d80;font:700 10px monospace;text-transform:uppercase}
+.process{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.step{padding:24px 18px;border-right:1px solid var(--line)}.step:last-child{border:0}.step i{font:800 10px monospace;color:var(--lime);font-style:normal}.step strong{display:block;margin-top:15px;font-size:17px}.step small{display:block;margin-top:8px;color:#7f887b}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}.about h3{font-size:28px;margin:0}.about p{color:#a9b0a4;font-size:17px}.quote{border-left:2px solid var(--lime);padding-left:22px;color:#dce2d7;font-size:25px;line-height:1.35;margin:28px 0}
+.contact{display:flex;align-items:end;justify-content:space-between;gap:30px}.contact h2{margin-bottom:10px}.contact p{color:#929a8e}.links{display:flex;gap:10px;flex-wrap:wrap}
+footer{padding:28px 0;border-top:1px solid var(--line);color:#667061;font:700 10px monospace;display:flex;justify-content:space-between;gap:20px}.lime{color:var(--lime)}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:40px}.portrait{max-width:700px;margin:auto}.workgrid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.metric:nth-child(2){border-right:0}.metric{border-bottom:1px solid var(--line)}.process{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}.about{grid-template-columns:1fr;gap:20px}.navlinks{display:none}.contact{display:block}}
+@media(max-width:480px){.wrap{width:min(calc(100% - 28px),var(--max))}.hero h1{font-size:55px}.hero p{font-size:17px}.section{padding:75px 0}.metrics{grid-template-columns:1fr}.metric,.metric:nth-child(2){border-right:0}.metric:last-child{border-bottom:0}footer{display:block}footer span{display:block;margin-top:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scan{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="#">DESUKAB / 01</a><div class="navlinks"><a href="#work">WORK</a><a href="#method">METHOD</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></div></nav>
+
+<header class="hero">
+<div>
+<div class="kicker">AI-NATIVE SYSTEMS BUILDER / HYDERABAD → ANYWHERE</div>
+<h1>I BUILD.<br><span>I BREAK.</span><br>I REBUILD.</h1>
+<p>I’m an early-career independent builder using AI coding agents as engineering collaborators — turning ambiguous ideas into real systems, then testing, measuring and rebuilding them until they hold up.</p>
+<div class="hero-actions">
+<a class="btn primary" href="https://github.com/desukab">VIEW GITHUB ↗</a>
+<a class="btn" href="#work">SEE THE WORK ↓</a>
+</div>
+</div>
+<div class="portrait"><img src="assets/portrait.svg" alt="Neon lime portrait illustration"><div class="scan"></div></div>
+</header>
+
+<section class="section" id="work">
+<div class="eyebrow">SELECTED WORK / 02</div>
+<h2>Two systems.<br>One obsession.</h2>
+<p class="intro">I care less about collecting technologies and more about making difficult ideas executable, observable and honest.</p>
+<div class="workgrid">
+<article class="card">
+<div class="num">01 / SELEKYT</div>
+<h3>Editorial intelligence for long-form video.</h3>
+<p>SeleKyT turns raw footage and an editorial brief into structured story/evidence understanding, editorial decisions and a deterministic, editable first cut with professional timeline outputs.</p>
+<div class="tags"><span class="tag">AI SYSTEMS</span><span class="tag">VIDEO</span><span class="tag">EDITORIAL REASONING</span><span class="tag">FCPXML / EDL</span><span class="tag">EVALUATION</span></div>
+<a class="more" href="https://github.com/desukab/selekyt">EXPLORE SELEKYT ↗</a>
+</article>
+<article class="card">
+<div class="num">02 / RUST STREAMING SYSTEMS LAB</div>
+<h3>A measurable streaming runtime.</h3>
+<p>A Tokio-based systems lab with bounded queues, deterministic key partitioning, concurrent workers, materialized state, indexing, retries, idempotency, stale-event protection, durability primitives, Axum APIs, WebSockets and runtime metrics.</p>
+<div class="tags"><span class="tag">RUST</span><span class="tag">TOKIO</span><span class="tag">BACKPRESSURE</span><span class="tag">CONCURRENCY</span><span class="tag">DURABILITY</span><span class="tag">BENCHMARKING</span></div>
+<a class="more" href="https://github.com/desukab/rust-streaming-systems-lab">EXPLORE THE LAB ↗</a>
+</article>
+</div>
+<div class="metrics">
+<div class="metric"><b>16,000</b><span>events processed</span></div>
+<div class="metric"><b>5,985/s</b><span>release throughput</span></div>
+<div class="metric"><b>3.3ms</b><span>p99 completion latency</span></div>
+<div class="metric"><b>328</b><span>retry-path executions</span></div>
+</div>
+</section>
+
+<section class="section" id="method">
+<div class="eyebrow">THE LOOP / 03</div>
+<h2>AI is the multiplier.<br>Verification is the job.</h2>
+<div class="process">
+<div class="step"><i>01</i><strong>DEFINE</strong><small>Turn an ambiguous objective into a concrete engineering target.</small></div>
+<div class="step"><i>02</i><strong>DECOMPOSE</strong><small>Architecture, constraints, interfaces and executable tasks.</small></div>
+<div class="step"><i>03</i><strong>ORCHESTRATE</strong><small>Use coding agents to research, implement and iterate.</small></div>
+<div class="step"><i>04</i><strong>BREAK</strong><small>Tests, compilers, adversarial cases and real workloads expose failure.</small></div>
+<div class="step"><i>05</i><strong>MEASURE</strong><small>Keep the artifact only when the evidence says it works.</small></div>
+</div>
+</section>
+
+<section class="section" id="about">
+<div class="eyebrow">WHY ME / 04</div>
+<div class="about">
+<div><h3>Unconventional by design.</h3></div>
+<div>
+<div class="quote">“I’m not asking you to believe I already know everything. I’m asking you to look at what I can build.”</div>
+<p>I’m early in conventional engineering experience, and I won’t manufacture years on a résumé. My advantage is the speed of the learning loop: research the unknown, turn it into an experiment, use AI as a force multiplier, inspect the result, find what broke, fix it, and measure again.</p>
+<p>I’m looking for teams working on AI engineering, agentic software, coding-agent evaluation, automation, backend/systems or technically ambitious products. I’m comfortable starting with a technical task and letting the work speak.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="contact">
+<div><div class="eyebrow">OPEN TO WORK / 05</div><h2>Give me a hard problem.</h2><p>Full-time · Contract · Freelance · Hyderabad / Remote · Open to relocation</p></div>
+<div class="links">
+<a class="btn primary" href="mailto:">CONTACT</a>
+<a class="btn" href="https://github.com/desukab">GITHUB ↗</a>
+<a class="btn" href="https://x.com/SeleKyT">SELEKYT / X ↗</a>
+</div>
+</div>
+</section>
+
+<footer><span>DESUKAB © 2026</span><span>BLACK / <b class="lime">NEON LIME</b> / BUILD → BREAK → MEASURE → REBUILD</span></footer>
+</div>
+</body>
+</html>
