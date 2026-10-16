@@ -42,16 +42,32 @@
 
 ---
 
+### Contributions
+
+Your GitHub contribution graph (green dots) counts commits from all repos — including private ones — once you enable it:
+
+1. Go to **github.com/settings/contributions**
+2. Turn on **"Private contributions"**
+3. Your total and streak will update automatically
+
+<p align="center">
+  <a href="https://github.com/desukab?tab=overview">
+    <img src="https://github-readme-stats.vercel.app/api?username=desukab&show_icons=true&theme=default&hide_border=true" alt="desukab's GitHub stats" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/desukab?tab=overview&from=2025-01-01&to=2026-12-31">
+    View contribution graph →
+  </a>
+</p>
+
+---
+
 ### Get in touch
 
 <p align="center">
   <a href="https://github.com/desukab">GitHub</a> ·
   <a href="https://desukab.github.io/">Portfolio</a> ·
   <a href="https://forms.gle/bsrh67bR46iqvXp96">Email</a>
-</p>
-
----
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=desukab&show_icons=true&theme=default&hide_border=true" alt="desukab's GitHub stats" />
 </p>
