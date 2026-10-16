@@ -1,4 +1,8 @@
-<h1 align="center">desukab · Bharath</h1>
+<h1 align="center">
+  <img src="https://avatars.githubusercontent.com/desukab?v=4" width="80" height="80" alt="desukab avatar" />
+  <br />
+  desukab · Bharath
+</h1>
 
 <p align="center">
   Independent software builder — AI agents, developer tools, and systems programming.<br>
