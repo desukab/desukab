@@ -1,0 +1,30 @@
+<svg width="800" height="360" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Setup</title>
+<desc id="desc">A matcha Material 3 Expressive surface listing Bharath's tools and stack.</desc>
+<defs><clipPath id="card"><rect width="800" height="360" rx="48"/></clipPath></defs>
+<rect width="800" height="360" rx="48" fill="#ffffff"/>
+<g clip-path="url(#card)">
+  <text x="60" y="56" font-family="Karla,Georgia,serif" font-weight="800" font-size="24" fill="#13160f">Setup</text>
+  <rect x="60" y="88" width="1" height="190" fill="#d9d6c4"/>
+  <text x="84" y="92" font-family="DM Mono,monospace" font-size="13" fill="#7e9765">Python</text>
+  <text x="84" y="92" font-family="Inter,system-ui,sans-serif" font-size="14" fill="#5c6150" x="140">· Rust · Dart</text>
+  <text x="84" y="116" font-family="DM Mono,monospace" font-size="13" fill="#7e9765">Flutter</text>
+  <text x="84" y="116" font-family="Inter,system-ui,sans-serif" font-size="14" fill="#5c6150" x="140">· QUIC · httpx</text>
+  <text x="84" y="140" font-family="DM Mono,monospace" font-size="13" fill="#7e9765">Linux</text>
+  <text x="84" y="140" font-family="Inter,system-ui,sans-serif" font-size="14" fill="#5c6150" x="140">· VS Code · Kitty</text>
+  <text x="84" y="164" font-family="DM Mono,monospace" font-size="13" fill="#7e9765">CI</text>
+  <text x="84" y="164" font-family="Inter,system-ui,sans-serif" font-size="14" fill="#5c6150" x="140">· Pytest · Cargo · GitHub Actions</text>
+  <text x="84" y="188" font-family="DM Mono,monospace" font-size="13" fill="#7e9765">Publish</text>
+  <text x="84" y="188" font-family="Inter,system-ui,sans-serif" font-size="14" fill="#5c6150" x="140">· PyPI · GitHub Pages</text>
+  <rect x="400" y="88" width="1" height="190" fill="#d9d6c4"/>
+  <text x="420" y="92" font-family="DM Mono,monospace" font-size="13" fill="#7e9765">Main rig</text>
+  <text x="420" y="116" font-family="Karla,Georgia,serif" font-weight="600" font-size="17" fill="#13160f">MSI GL62VR</text>
+  <text x="420" y="140" font-family="DM Mono,monospace" font-size="12" fill="#5c6150">Intel i7 · GTX 1060 · 16 GB RAM</text>
+  <text x="420" y="164" font-family="DM Mono,monospace" font-size="12" fill="#5c6150">1 TB SSD · Arch Linux</text>
+  <text x="420" y="188" font-family="DM Mono,monospace" font-size="13" fill="#7e9765">On the go</text>
+  <text x="420" y="212" font-family="Karla,Georgia,serif" font-weight="600" font-size="17" fill="#13160f">ThinkPad X270</text>
+  <text x="420" y="236" font-family="DM Mono,monospace" font-size="12" fill="#5c6150">16 GB RAM · 256 GB SSD</text>
+  <text x="420" y="260" font-family="DM Mono,monospace" font-size="13" fill="#7e9765">Daily phone</text>
+  <text x="420" y="284" font-family="Karla,Georgia,serif" font-weight="600" font-size="17" fill="#13160f">Galaxy S22 Ultra</text>
+</g>
+</svg>
